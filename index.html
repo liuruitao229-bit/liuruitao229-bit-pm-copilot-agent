@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PM Copilot Agent</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="sidebar" aria-label="产品工作流">
+        <div class="brand">
+          <div class="brand-mark">PM</div>
+          <div>
+            <h1>PM Copilot</h1>
+            <p>产品经理实习生的 Agent 工作台</p>
+          </div>
+        </div>
+
+        <nav class="workflow-list" id="workflowList">
+          <button class="workflow is-active" data-workflow="clarify">
+            <span>01</span>
+            <strong>需求澄清</strong>
+            <small>把模糊想法问清楚</small>
+          </button>
+          <button class="workflow" data-workflow="prd">
+            <span>02</span>
+            <strong>PRD 初稿</strong>
+            <small>生成结构化产品文档</small>
+          </button>
+          <button class="workflow" data-workflow="competitor">
+            <span>03</span>
+            <strong>竞品分析</strong>
+            <small>定位、路径、机会点</small>
+          </button>
+          <button class="workflow" data-workflow="metrics">
+            <span>04</span>
+            <strong>指标设计</strong>
+            <small>目标、埋点、验证方式</small>
+          </button>
+          <button class="workflow" data-workflow="review">
+            <span>05</span>
+            <strong>评审模拟</strong>
+            <small>提前准备尖锐问题</small>
+          </button>
+        </nav>
+      </aside>
+
+      <section class="workspace">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Agent Mode</p>
+            <h2 id="workflowTitle">需求澄清</h2>
+          </div>
+          <div class="status-pill"><span></span>可运行原型</div>
+        </header>
+
+        <section class="chat-panel" aria-label="Agent 对话">
+          <div class="messages" id="messages"></div>
+          <form class="composer" id="composer">
+            <textarea id="promptInput" rows="3" placeholder="输入你的产品想法，例如：我要做一个在线课程 App 的学习打卡功能"></textarea>
+            <button type="submit">生成</button>
+          </form>
+        </section>
+      </section>
+
+      <aside class="artifact-panel" aria-label="结构化产出">
+        <div class="artifact-header">
+          <div>
+            <p class="eyebrow">Output</p>
+            <h2>结构化产出</h2>
+          </div>
+          <button id="copyButton" type="button">复制</button>
+        </div>
+        <article class="artifact" id="artifact"></article>
+      </aside>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
