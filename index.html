@@ -3,45 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PM Copilot Agent</title>
+    <title>Trip.com 日韩酒店产品 Agent</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <main class="app-shell">
-      <aside class="sidebar" aria-label="产品工作流">
+      <aside class="sidebar" aria-label="携程产品经理工作流">
         <div class="brand">
-          <div class="brand-mark">PM</div>
+          <div class="brand-mark">携程</div>
           <div>
-            <h1>PM Copilot</h1>
-            <p>产品经理实习生的 Agent 工作台</p>
+            <h1>日韩酒店 PM Agent</h1>
+            <p>面向携程产品经理 JD 的作品集工具</p>
           </div>
         </div>
 
         <nav class="workflow-list" id="workflowList">
-          <button class="workflow is-active" data-workflow="clarify">
+          <button class="workflow is-active" data-workflow="journey">
             <span>01</span>
-            <strong>需求澄清</strong>
-            <small>把模糊想法问清楚</small>
+            <strong>用户旅程图</strong>
+            <small>12 个链路环节完整拆解</small>
           </button>
-          <button class="workflow" data-workflow="prd">
+          <button class="workflow" data-workflow="demand">
             <span>02</span>
-            <strong>PRD 初稿</strong>
-            <small>生成结构化产品文档</small>
+            <strong>需求池模板</strong>
+            <small>问题、依据、方案、优先级</small>
           </button>
-          <button class="workflow" data-workflow="competitor">
+          <button class="workflow" data-workflow="pages">
             <span>03</span>
-            <strong>竞品分析</strong>
-            <small>定位、路径、机会点</small>
+            <strong>重点页面定义</strong>
+            <small>搜索、列表、地图、详情、支付</small>
           </button>
-          <button class="workflow" data-workflow="metrics">
+          <button class="workflow" data-workflow="support">
             <span>04</span>
-            <strong>指标设计</strong>
-            <small>目标、埋点、验证方式</small>
+            <strong>数据/运营/市场</strong>
+            <small>跨团队支持清单</small>
           </button>
-          <button class="workflow" data-workflow="review">
+          <button class="workflow" data-workflow="interview">
             <span>05</span>
-            <strong>评审模拟</strong>
-            <small>提前准备尖锐问题</small>
+            <strong>面试表达</strong>
+            <small>项目讲法与追问准备</small>
           </button>
         </nav>
       </aside>
@@ -49,16 +49,16 @@
       <section class="workspace">
         <header class="topbar">
           <div>
-            <p class="eyebrow">Agent Mode</p>
-            <h2 id="workflowTitle">需求澄清</h2>
+            <p class="eyebrow">Trip.com Product Agent</p>
+            <h2 id="workflowTitle">用户旅程图</h2>
           </div>
-          <div class="status-pill"><span></span>可运行原型</div>
+          <div class="status-pill"><span></span>携程 PM 定制版</div>
         </header>
 
         <section class="chat-panel" aria-label="Agent 对话">
           <div class="messages" id="messages"></div>
           <form class="composer" id="composer">
-            <textarea id="promptInput" rows="3" placeholder="输入你的产品想法，例如：我要做一个在线课程 App 的学习打卡功能"></textarea>
+            <textarea id="promptInput" rows="3" placeholder="输入你的补充想法，例如：首次去大阪的学生用户，在列表页不知道怎么比较酒店"></textarea>
             <button type="submit">生成</button>
           </form>
         </section>
@@ -67,8 +67,8 @@
       <aside class="artifact-panel" aria-label="结构化产出">
         <div class="artifact-header">
           <div>
-            <p class="eyebrow">Output</p>
-            <h2>结构化产出</h2>
+            <p class="eyebrow">Portfolio Output</p>
+            <h2>作品集产出</h2>
           </div>
           <button id="copyButton" type="button">复制</button>
         </div>
